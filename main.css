@@ -40,36 +40,105 @@ video {
   height: auto;
 }
 
+body {
+    margin: 0;
+}
+
 /* MAIN CSS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #fef3c7;
-    color: #451a03;
-    display: flex;
-    height: 100vh;
-    position: relative;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
-    justify-content: center;
-    min-width: 16rem;
-}
-
 main {
+    font-family: 'Inter', sans-serif;
+    background-color: #e5e7eb;
+    color: #030712;
+    display: flex;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
     justify-content: center;
-    width: 100%;
+    padding: 1rem;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right {
+    align-items: start;
+}
+
+.left {
+    align-items: end;
+}
+
+#sketchGrid {
+    width: 100%;
+    max-width: 40rem;
+    background-color: #f9fafb;
+    aspect-ratio: 1 / 1;
+    border: solid 1px #f3f4f6;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+}
+
+.sliderContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: #f9fafb;
+    outline: none;
+    -webkit-transition: 200ms;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+.square {
+    transition: 200ms;
+    cursor: crosshair;
+}
+
+
+.color {
+    background-color: 030712;
+    cursor: crosshair;
+}
+
+
+.square:hover {
+    background-color: #e5e7eb;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
 
 footer {
     position: absolute;
@@ -78,34 +147,13 @@ footer {
     right: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
-    background-color: #fde68a;
-}
-
-.sketchGrid {
-    background-color: #fffbeb;
-    max-width: 40rem;
-    aspect-ratio: 1 / 1;
-    border: solid 1px #f59e0b;
-    border-radius: 0.5rem;
-}
-
-.square {
-    transition: 200ms;
-}
-
-.square:hover {
-    background-color: #fde68a;
-}
-
-h1 {
-    font-weight: bold;
+    background-color: #030712;
+    color: #f9fafb;
 }
 
 
-
-.textOverline {
-    text-transform: uppercase;
-    font-weight: bold;
+a {
+    color: #e5e7eb;
 }
-
